@@ -12,13 +12,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/faire_du_bien_a_victor"
+        android:onClick="changervictor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/a_main_img_victornrm" />
+        app:layout_constraintTop_toBottomOf="@+id/a_main_img_victor" />
 
     <ImageView
-        android:id="@+id/a_main_img_victornrm"
+        android:id="@+id/a_main_img_victor"
         android:layout_width="242dp"
         android:layout_height="246dp"
         android:contentDescription="@string/la_belle_image_de_base"
@@ -26,18 +27,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/victornormal" />
-
-    <ImageView
-        android:id="@+id/a_main_img_victorheurx"
-        android:layout_width="241dp"
-        android:layout_height="249dp"
-        android:visibility="invisible"
-        android:contentDescription="@string/victorheureux"
-        app:layout_constraintBottom_toTopOf="@+id/a_main_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/victorheureux" />
+        app:srcCompat="@drawable/victornormal" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
