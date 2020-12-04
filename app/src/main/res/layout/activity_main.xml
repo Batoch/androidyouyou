@@ -23,16 +23,35 @@
 
     <ImageView
         android:id="@+id/a_main_img_victor"
-        android:layout_width="300dp"
+        android:layout_width="250dp"
         android:layout_height="300dp"
+        android:adjustViewBounds="false"
         android:alpha="0.9"
         android:contentDescription="@string/la_belle_image_de_base"
+        android:cropToPadding="false"
+        android:scaleType="fitXY"
         android:tint="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/a_main_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/victornormal"
-        app:tint="#31E88989" />
+        app:tint="#31E88989"
+        tools:ignore="UseAppTint" />
+
+    <ImageView
+        android:id="@+id/a_main_frame"
+        android:layout_width="250dp"
+        android:layout_height="300dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/img_frame"
+        app:layout_constraintBottom_toTopOf="@+id/a_main_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/gold_frame_design" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
