@@ -11,7 +11,7 @@
     <Button
         android:id="@+id/a_main_btn"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/width_you"
         android:layout_height="wrap_content"
         android:alpha="0.9"
         android:onClick="changervictor"
@@ -23,35 +23,49 @@
 
     <ImageView
         android:id="@+id/a_main_img_victor"
-        android:layout_width="250dp"
-        android:layout_height="300dp"
+        android:layout_width="@dimen/width_you"
+        android:layout_height="@dimen/height_you"
         android:adjustViewBounds="false"
         android:alpha="0.9"
         android:contentDescription="@string/la_belle_image_de_base"
         android:cropToPadding="false"
         android:scaleType="fitXY"
         android:tint="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/a_main_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.40"
         app:srcCompat="@drawable/victornormal"
         app:tint="#31E88989"
         tools:ignore="UseAppTint" />
 
     <ImageView
         android:id="@+id/a_main_frame"
-        android:layout_width="250dp"
-        android:layout_height="300dp"
+        android:layout_width="@dimen/width_you"
+        android:layout_height="@dimen/height_you"
         android:adjustViewBounds="false"
+        android:contentDescription="@string/img_frame"
         android:cropToPadding="false"
         android:scaleType="fitXY"
-        android:contentDescription="@string/img_frame"
-        app:layout_constraintBottom_toTopOf="@+id/a_main_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/a_main_img_victor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/gold_frame_design" />
+
+    <TextView
+        android:id="@+id/a_main_txt_cmpt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:text="@string/dose_de_plaisir"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/a_main_img_victor"
+        app:layout_constraintStart_toStartOf="@+id/a_main_frame"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
