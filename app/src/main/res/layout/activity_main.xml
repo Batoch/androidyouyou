@@ -7,42 +7,37 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/a_main_btn"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/faire_du_bien_a_victor"
-        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/a_main_img_victornrm" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/a_main_img_victornrm"
         android:layout_width="242dp"
         android:layout_height="246dp"
         android:contentDescription="@string/la_belle_image_de_base"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/a_main_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/victornormal"
-        tools:srcCompat="@mipmap/victornormal" />
+        app:srcCompat="@mipmap/victornormal" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/a_main_img_victorheurx"
         android:layout_width="241dp"
         android:layout_height="249dp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        android:contentDescription="@string/victorheureux"
+        app:layout_constraintBottom_toTopOf="@+id/a_main_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/unknown"
-        android:contentDescription="@string/victorheureux" />
+        app:srcCompat="@mipmap/victorheureux" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

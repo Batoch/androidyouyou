@@ -6,6 +6,7 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
     private Button button;
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button = findViewById(R.id.button);
+        button = findViewById(R.id.a_main_btn);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,11 +30,11 @@ public class MainActivity extends AppCompatActivity {
     public void changervictor(){
         victorcontent = !victorcontent;
         if (victorcontent){
-            findViewById(R.id.imageView2).setVisibility(View.VISIBLE);
+            findViewById(R.id.a_main_img_victorheurx).setVisibility(View.VISIBLE);
             button.setText("Calmer victor");
         }
         else {
-            findViewById(R.id.imageView2).setVisibility(View.INVISIBLE);
+            findViewById(R.id.a_main_img_victorheurx).setVisibility(View.INVISIBLE);
             button.setText("Refaire du bien a Victor");
         }
 
