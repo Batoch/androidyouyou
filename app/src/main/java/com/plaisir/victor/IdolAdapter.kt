@@ -5,7 +5,6 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 
 
@@ -17,8 +16,9 @@ class IdolAdapter(
     private lateinit var prefs: SharedPreferences
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): IdolViewHolder {
-        val rowView = LayoutInflater.from(parent.context).inflate(R.layout.element_idol, parent, false)
         eContext = parent.context
+
+        val rowView = LayoutInflater.from(parent.context).inflate(R.layout.chi, parent, false)
         return IdolViewHolder(rowView)
     }
 
@@ -27,9 +27,9 @@ class IdolAdapter(
 
         holder.txvIdolName.text = name
         holder.imvIdol.setImageResource(img_icon)
-        holder.setBackgroundResource(img_background)
+        holder.imvBackground.setImageResource(img_background)
 
-        ((selector_view.getAdapter() as SimpleTabPagerAdapter).getItem(position) as ImageView).setBackgroundResource(R.drawable.p_photo_marked)
+        //((selector_view.getAdapter() as SimpleTabPagerAdapter).getItem(position) as ImageView).setBackgroundResource(R.drawable.p_photo_marked)
 
 
         //Toast.makeText(eContext, "favList : $isFavoriteVal", Toast.LENGTH_SHORT).show()

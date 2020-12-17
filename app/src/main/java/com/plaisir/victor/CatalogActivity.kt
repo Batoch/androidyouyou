@@ -21,7 +21,7 @@ class CatalogActivity : AppCompatActivity() {
         setContentView(R.layout.activity_catalog)
 
         idols.add(IdolModel(1,"L'Otello", R.drawable.idol_background, R.drawable.otello_lapin, 0, 22))
-        idols.add(IdolModel(2,"Deng le président ", R.drawable.background_china, R.drawable.deng, 0, 25))
+        idols.add(IdolModel(2,"Deng le président", R.drawable.background_china, R.drawable.deng, 0, 25))
 
         this.rcvIdols = findViewById(R.id.a_catalog)
         this.rcvIdols.adapter = IdolAdapter(idols)
