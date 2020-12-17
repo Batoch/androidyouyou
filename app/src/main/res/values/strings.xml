@@ -14,4 +14,6 @@
     <string name="love_theme">love_theme</string>
     <string name="img_frame">img_frame</string>
     <string name="dose_de_plaisir">DOSE DE PLAISIR : </string>
+    <string name="img_idol">img_idol</string>
+    <string name="e_txt_idol">e_idol_name</string>
 </resources>

@@ -1,6 +1,10 @@
 package com.plaisir.victor
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
@@ -9,14 +13,14 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 
-class MainActivity : AppCompatActivity() {
+class YouActivity : AppCompatActivity() {
 
     private var victorEstNormal: Boolean = true
     private var compteurDePlaisir: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_you)
         //init counter display:
         findViewById<TextView>(R.id.a_main_txt_cmpt).text = (getString(R.string.dose_de_plaisir) + "$compteurDePlaisir")
     }
@@ -37,4 +41,29 @@ class MainActivity : AppCompatActivity() {
         }
         victorEstNormal = !victorEstNormal
     }
+
+    /** POUR LE MENU DE LA TOOLBAR */
+    @SuppressLint("ResourceType")
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.layout.menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) { //switch case
+            R.id.menu_action_refresh -> {
+                Toast.makeText(this, "Server data refreshed", Toast.LENGTH_SHORT).show()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    fun backToCatalog(view: View) {
+        val intent = Intent()
+        intent.putExtra(FROM_YOU_EXTRA_KEY, true)
+        setResult(RESULT_OK, intent)
+        finish()
+    }
+
 }
