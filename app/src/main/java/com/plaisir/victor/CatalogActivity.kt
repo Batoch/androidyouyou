@@ -19,7 +19,8 @@ class CatalogActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_catalog)
 
-        idols.add(IdolModel(1, "L'Otello", R.drawable.idol_background, R.drawable.otello_lapin, 0, 22, "wideg", 36F, "YouActivity"))
+        idols.add(IdolModel(0, "You", R.drawable.background_china2, R.drawable.ic_you, 2, 22, "MistyGold", 60F, "YouActivity"))
+        idols.add(IdolModel(1, "L'Otello", R.drawable.idol_background, R.drawable.otello_lapin, 0, 22, "wideg", 36F, "OtelloActivity"))
         idols.add(IdolModel(2, "Deng le president", R.drawable.background_china, R.drawable.deng, 0, 25, "zenzai", 38F, "DengActivity"))
 
         this.rcvIdols = findViewById(R.id.a_catalog)
