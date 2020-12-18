@@ -33,15 +33,7 @@ class CatalogActivity : AppCompatActivity() {
     }
 
     fun idolClic(view: View) {
-        val message = "fdg"
-//        val intent = Intent(this, YouActivity::class.java).apply {
-//            putExtra(EXTRA_MESSAGE, message)
-//        }
-//        IdolAdapter(idols).isFavorite()
         Toast.makeText(this, "Not implemented yet", Toast.LENGTH_SHORT).show()
-//        startActivity(Intent(this@CatalogActivity, YouActivity::class.java))
-//        startActivity(intent)
-
     }
 
 }

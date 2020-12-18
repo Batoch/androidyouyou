@@ -10,6 +10,6 @@ data class IdolModel(
         val access_lv: Number,
         val age: Number,
         val police: String,
-        val policesize: Float,
-        val activityname: String
+        val police_size: Float,
+        val activity_name: String
 ) : Serializable

@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="@dimen/idol_img_frame">
 
     <ImageView
         android:id="@+id/e_idol_background"
@@ -20,22 +20,29 @@
         android:orientation="horizontal">
 
         <ImageView
+            android:layout_weight="1"
             android:id="@+id/e_idol_img"
             android:layout_width="@dimen/idol_img_frame"
-            android:layout_height="@dimen/idol_img_frame"
+            android:layout_height="match_parent"
+            android:gravity="left"
             android:contentDescription="@string/img_idol"
-            app:srcCompat="@drawable/otello_lapin" />
+            app:srcCompat="@drawable/deng"/>
 
         <TextView
+            android:layout_weight="3"
+            android:text="Otello"
             android:id="@+id/e_idol_txt_name"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
+            android:gravity="left|center"
             android:contentDescription="@string/e_txt_idol"
             android:fontFamily="sans-serif"
-            android:text="Otello"
             android:textColor="@android:color/black"
-            android:textSize="38sp"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeStepGranularity="2sp"
+            android:maxLines="1"
             app:layout_constraintTop_toTopOf="@id/e_idol_img" />
 
     </LinearLayout>
