@@ -1,9 +1,8 @@
 package com.plaisir.victor
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -20,8 +19,8 @@ class CatalogActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_catalog)
 
-        idols.add(IdolModel(1,"L'Otello", R.drawable.idol_background, R.drawable.otello_lapin, 0, 22))
-        idols.add(IdolModel(2,"Deng le président", R.drawable.background_china, R.drawable.deng, 0, 25))
+        idols.add(IdolModel(1, "L'Otello", R.drawable.idol_background, R.drawable.otello_lapin, 0, 22, "wideg", 36F, "YouActivity"))
+        idols.add(IdolModel(2, "Deng le president", R.drawable.background_china, R.drawable.deng, 0, 25, "zenzai", 38F, "DengActivity"))
 
         this.rcvIdols = findViewById(R.id.a_catalog)
         this.rcvIdols.adapter = IdolAdapter(idols)
@@ -33,5 +32,16 @@ class CatalogActivity : AppCompatActivity() {
 
     }
 
+    fun idolClic(view: View) {
+        val message = "fdg"
+//        val intent = Intent(this, YouActivity::class.java).apply {
+//            putExtra(EXTRA_MESSAGE, message)
+//        }
+//        IdolAdapter(idols).isFavorite()
+        Toast.makeText(this, "Not implemented yet", Toast.LENGTH_SHORT).show()
+//        startActivity(Intent(this@CatalogActivity, YouActivity::class.java))
+//        startActivity(intent)
+
+    }
 
 }

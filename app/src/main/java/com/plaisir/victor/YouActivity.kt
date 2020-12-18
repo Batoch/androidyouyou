@@ -1,6 +1,5 @@
 package com.plaisir.victor
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
@@ -43,7 +42,6 @@ class YouActivity : AppCompatActivity() {
     }
 
     /** POUR LE MENU DE LA TOOLBAR */
-    @SuppressLint("ResourceType")
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.layout.menu, menu)
         return super.onCreateOptionsMenu(menu)

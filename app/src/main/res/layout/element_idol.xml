@@ -10,14 +10,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
-        android:contentDescription="Background"
+        android:contentDescription="@string/background_desc"
         android:adjustViewBounds="true"
-        android:onClick="Idol" />
+        android:onClick="idolClic" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">
+
         <ImageView
             android:id="@+id/e_idol_img"
             android:layout_width="@dimen/idol_img_frame"
@@ -27,12 +28,14 @@
 
         <TextView
             android:id="@+id/e_idol_txt_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
             android:contentDescription="@string/e_txt_idol"
+            android:fontFamily="sans-serif"
             android:text="Otello"
             android:textColor="@android:color/black"
-            android:textSize="36sp"
+            android:textSize="38sp"
             app:layout_constraintTop_toTopOf="@id/e_idol_img" />
 
     </LinearLayout>
